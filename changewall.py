@@ -4,7 +4,6 @@ import subprocess
 
 # File paths
 filepath = "Path to hyprpaper.conf"
-databasepath = "Path to the JSON with all the wallpapers"
 
 # Function to display menu and select a wallpaper
 def menu(data):
