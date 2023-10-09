@@ -25,7 +25,7 @@ def menu(data):
     monitors = json.loads(hyprout)
     monitor_names = [monitor['name'] for monitor in monitors]
 
-    if len(monitor_names)==0:
+    if len(monitor_names)!=1:
         for i in range(len(monitor_names)):
             print(str(i) + " - " + monitor_names[i])
         decision = int(input("Insert the monitor number: "))
