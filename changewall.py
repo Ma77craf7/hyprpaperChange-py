@@ -25,12 +25,14 @@ def menu(data):
     monitors = json.loads(hyprout)
     monitor_names = [monitor['name'] for monitor in monitors]
 
-    for i in range(len(monitor_names)):
-        print(str(i) + " - " + monitor_names[i])
-    decision = int(input("Insert the monitor number: "))
-    while decision < 0 or decision >= len(monitor_names):
-        decision = int(input("Invalid selection. Select the monitor again: "))
-
+    if len(monitor_names)==0:
+        for i in range(len(monitor_names)):
+            print(str(i) + " - " + monitor_names[i])
+        decision = int(input("Insert the monitor number: "))
+        while decision < 0 or decision >= len(monitor_names):
+            decision = int(input("Invalid selection. Select the monitor again: "))
+    else:
+        decision = 0
     monitor = monitor_names[decision]
 
     return wallpaper, monitor
